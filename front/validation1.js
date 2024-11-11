@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const rRadioButtons = document.querySelectorAll('input[name="R-value"]');
     const submitBtn = document.getElementById('submit-btn');
     const clearBtn = document.getElementById('clear-btn');
-    const resultTableBody = document.querySelector('.Set-table tbody'); // Обращаемся к tbody таблицы
+    const resultTableBody = document.querySelector('.Set-table tbody');
 
     let selectedY = null;
     let selectedR = null;
@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (data.ошибка) {
                     alert(`Ошибка: ${data.ошибка}`);
                 } else {
-                    // Вставляем данные в таблицу
                     addRowToTable(x, y, r, data.сейчас, data.времяВыполнения, data.результат);
                 }
             }
@@ -99,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function clearTable() {
-        resultTableBody.innerHTML = ''; // Удаляем все строки из таблицы, кроме заголовка
+        resultTableBody.innerHTML = '';
     }
 
     function createPopup(element, message, id, options = {}) {
