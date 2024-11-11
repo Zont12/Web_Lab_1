@@ -1,0 +1,279 @@
+/* Основные стили */
+body {
+    margin: 0;
+    height: 100vh; /* Устанавливаем высоту на весь экран */
+    background-image: url("https://www.northerniowan.com/wp-content/uploads/2024/03/breaking-bad-1200x675.png");
+    background-repeat: repeat; /* Изображение не повторяется */
+    background-size: cover; /* Изображение растягивается на весь экран */
+    background-position: center 100px; /* Смещаем фон вниз на 100px */
+}
+
+/* Основная таблица */
+.lab-table {
+    border-collapse: collapse; /* Объединение границ */
+    width: 100%; /* Ширина таблицы */
+    text-align: center; /* Центрирование текста */
+    background-image: url("https://7themes.su/_ph/40/548422915.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-left: none;
+    border-top: 1px solid black; /* Верхняя граница */
+    border-bottom: 3px solid black; /* Нижняя граница */
+}
+
+/* Стили для заголовков таблицы */
+#cap {
+    line-height: 20px; /* Устанавливаем конкретную высоту строки */
+    padding: 1px; /* Отступы внутри заголовочных ячеек */
+    font-size: 18px; /* Размер шрифта */
+    font-family: 'Courier New', monospace;
+    color: #ffffff;  /* Цвет текста заголовков */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Стили для изображений */
+#first_image {
+    width: 150px;
+    height: 30px;
+    background-size: cover;
+    background-image: url("https://sun6-20.userapi.com/impg/nrW96zg8Wa4F9Xb8oSwTmbJB0PWumVchG_tweQ/h9ge_gcysZE.jpg?size=1890x1417&quality=96&sign=969e89d97787249ce19c9783be14d98d&type=album");
+
+}
+#second_image {
+    width: 150px;
+    height: 30px;
+    background-size: cover;
+    background-image: url("https://sun9-14.userapi.com/impg/o7K_ssLGUh4Z032gwi_LVg8sNfkZVttoqOoTtw/vSy5h8cMqEc.jpg?size=1890x1417&quality=96&sign=5e3e336119ad6f24ddeeaee14481e521&type=album");
+}
+
+/* Стили для блока main-block */
+.main-table {
+    text-align: center;
+    position: absolute;
+    width: 1100px;/* Устанавливаем ширину блока */
+    height: auto; /* Автоматическая высота по содержимому */
+    border: 5px solid black; /* Граница вокруг блока */
+    top: 45%; /* Отступ сверху на 50% */
+    left: 50%; /* Отступ слева на 50% */
+    transform: translate(-50%, -50%); /* Центрирование блока относительно его размеров */
+}
+
+.main-table::before {
+    content: ""; /* Обязательно для псевдоэлемента */
+    opacity: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://7themes.su/_ph/40/548422915.jpg"); /* Фоновое изображение */
+    background-repeat: no-repeat;
+    background-size: cover; /* Масштабирование изображения */
+    z-index: -1; /* Размещаем за контентом блока */
+}
+#graph-block {
+    float: left;
+    text-align: left;
+    margin-top: 20px;
+    filter: brightness(70%); /* Уменьшаем яркость изображения */
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-image: url("https://lifehacker.ru/wp-content/uploads/2016/02/cover_1455227228.jpg");
+    background-size: 100% 100%; /* Масштабируем фон до размера блока */
+    border: 5px solid black;
+}
+
+.Second_block {
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+    border: 5px solid black;
+    height: 250px;
+    width: 450px;
+    background-image: url("https://img.freepik.com/premium-photo/old-green-board-texture-grunge-background_625816-828.jpg");
+    background-size: contain;
+
+}
+
+/* Центрирование основной таблицы */
+.button_table {
+    margin: 0 auto; /* Центрирование всей вложенной таблицы */
+    width: 100%;    /* Установка ширины на весь родительский контейнер */
+}
+
+/* Общие стили для ячеек с метками */
+.label-cell {
+    text-align: center; /* Центрирование текста меток */
+    padding: 5px;
+}
+
+#X label,
+#Y .label-cell,
+#R .label-cell {
+    color: white; /* Белый цвет текста */
+    font-family: 'Courier New', monospace;
+}
+
+/* Стили для X */
+#X {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    margin: 10px 0; /* Отступы сверху и снизу */
+
+}
+
+
+#x-input {
+    background-color: darkgreen; /* Зелёный цвет фона */
+    color: white; /* Белый цвет текста */
+    border: 2px solid white; /* Зелёная граница */
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    outline: none; /* Убираем стандартную обводку */
+    text-align: center; /* Горизонтальное центрирование текста */
+
+}
+
+/* Стили для Y */
+#Y {
+    display: flex;
+    justify-content: center; /* Центрирование всех элементов */
+    align-items: center; /* Вертикальное выравнивание */
+    margin: 10px 0; /* Отступы для Y */
+}
+
+#Y .num-btn {
+    background-color: darkgreen; /* Установка фона кнопок */
+    color: white;                /* Цвет текста внутри кнопок */
+    border: 1px solid white;     /* Белая рамка для кнопок */
+    padding: 5px 10px;           /* Внутренние отступы */
+    margin: 2px;                 /* Внешние отступы */
+    cursor: pointer;             /* Изменение курсора на указатель */
+
+}
+
+#Y .num-btn:hover {
+    border: 3px solid white; /* Увеличение толщины обводки */
+    font-weight: bold; /* Сделать текст жирным */
+    cursor: pointer; /* Курсор в виде указателя */
+    transform: scale(1.1); /* Увеличение кнопки при наведении */
+    transition: all 0.2s ease-in-out; /* Плавный переход для анимации */
+}
+
+#Y .num-btn.selected {
+    border: 3px solid white; /* Жирная белая рамка */
+    font-weight: bold; /* Жирный шрифт */
+    transform: scale(1.1); /* Увеличение для выделенной кнопки */
+}
+
+/* Стили для радиокнопок R */
+#R {
+    display: flex;
+    justify-content: center; /* Центрирование радиокнопок */
+    align-items: center;
+    margin: 10px 0; /* Отступы сверху и снизу */
+    gap: 5px; /* Расстояние между радиокнопками */
+    transform: scale(1.2); /* Увеличение радиокнопок в 1.5 раза */
+    font-size: 14px; /* Размер текста меток */
+    accent-color: green; /* Цвет радиокнопки */
+    text-align: center; /* Горизонтальное центрирование текста */
+    height: 30px; /* Высота поля для вертикального выравнивания */
+    line-height: 30px; /* Центрирование текста по вертикали */
+
+}
+
+.r-spacing {
+    margin: 0 10px; /* Отступы между радиокнопками */
+    color: white; /* Белый цвет текста */
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+
+}
+
+
+.control-btn {
+    background-color: darkgreen; /* Фон кнопок */
+    color: white; /* Цвет текста */
+    border: 2px solid white; /* Белая граница */
+    padding: 10px 20px; /* Внутренние отступы */
+    margin: 5px; /* Внешние отступы */
+    cursor: pointer; /* Изменение курсора */
+    font-family: 'Courier New', monospace;
+    font-size: 16px; /* Размер текста */
+    border-radius: 2px; /* Скруглённые углы */
+    transition: background-color 0.3s ease; /* Плавное изменение фона */
+}
+
+/* Изменение цвета кнопки при наведении */
+.control-btn:hover {
+    background-color: limegreen; /* Светло-зелёный фон при наведении */
+    color: black; /* Чёрный текст при наведении */
+}
+
+
+
+.Set-table {
+    text-align: center;
+    position: absolute;
+    width: 1100px; /* Устанавливаем ширину таблицы */
+    height: auto; /* Автоматическая высота по содержимому */
+    border: 5px solid black; /* Граница вокруг всей таблицы */
+    top: 80%; /* Начальное положение таблицы сверху */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, 0); /* Смещаем только по горизонтали */
+    background-image: url("https://7themes.su/_ph/40/548422915.jpg"); /* Фоновое изображение */
+    background-repeat: no-repeat;
+    background-size: cover; /* Масштабирование изображения */
+    z-index: 1; /* Убедитесь, что таблица находится поверх фоновых элементов */
+}
+
+
+.error-popup {
+    position: absolute;
+    background-color: green;
+    font-family: 'Courier New', monospace;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 11px;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -110%); /* Смещение для более аккуратного позиционирования */
+
+}
+
+.error-popup::after {
+    opacity: 0.8; /* Устанавливаем прозрачность */
+    content: '';
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    border-color: green transparent transparent transparent;
+    top: 100%; /* Положение указателя */
+    left: 50%;
+
+}
+
+.Top {
+    color: white; /* Белый цвет текста */
+    font-family: 'Courier New', monospace;
+}
+
+.Set-table tbody td {
+    color: white;
+    font-family: 'Courier New', monospace;
+}
+
+.Set-table th,
+.Set-table td {
+    border-right: 3px solid black; /* Разделительная вертикальная полоса */
+    padding: 10px; /* Внутренние отступы для красоты */
+}
+
+/* Удаляем вертикальную границу у последней ячейки */
+.Set-table th:last-child,
+.Set-table td:last-child {
+    border-right: none;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа</title>
+    <link rel="stylesheet" href="styles1.css"> <!-- Подключение CSS-файла -->
+</head>
+<body>
+<!-- Основная таблица с изображениями (шапка) -->
+<table class="lab-table">
+    <tr>
+        <td id="first_image"></td>
+        <td id="cap">
+            Labolatorn 1
+            <p> Solodovnikov Danila Dmitrievich P3207 </p>
+            <p> Variant 372411 </p>
+        </td>
+        <td id="second_image"></td>
+    </tr>
+</table>
+
+<!-- Основной контейнер для таблицы с графиком и кнопками -->
+<table class="main-table">
+    <tr>
+        <!-- Левая колонка с графиком -->
+        <td>
+            <table class="First_block">
+                <tr>
+                    <td id="graph-block">
+                        <!-- Элемент canvas для рисования графика -->
+                        <canvas id="graphCanvas" width="400" height="400" style="border:2px solid black;"></canvas>
+                    </td>
+                </tr>
+            </table>
+        </td>
+
+        <!-- Правая колонка с таблицей кнопок -->
+        <td>
+            <table class="Second_block">
+                <tr>
+                    <td>
+                        <table class="button_table">
+                            <!-- Строка для X с полем ввода -->
+                            <tr id="X">
+                                <td class="label-cell"><label for="x-input">X:</label></td>
+                                <td><input type="text" id="x-input" class="text-input"></td>
+                            </tr>
+
+                            <!-- Строка для Y с кнопками -->
+                            <tr id="Y">
+                                <td class="label-cell">Y:</td>
+                                <td><button class="num-btn">-2</button></td>
+                                <td><button class="num-btn">-1.5</button></td>
+                                <td><button class="num-btn">-1</button></td>
+                                <td><button class="num-btn">-0.5</button></td>
+                                <td><button class="num-btn">0</button></td>
+                                <td><button class="num-btn">0.5</button></td>
+                                <td><button class="num-btn">1</button></td>
+                                <td><button class="num-btn">1.5</button></td>
+                                <td><button class="num-btn">2</button></td>
+                            </tr>
+
+                            <!-- Строка для R с радио кнопками -->
+                            <tr id="R">
+                                <td class="label-cell">R:</td>
+                                <td class="r-spacing"><input type="radio" name="R-value" value="1" id="r1"><label for="r1">1</label></td>
+                                <td class="r-spacing"><input type="radio" name="R-value" value="1.5" id="r1_5"><label for="r1_5">1.5</label></td>
+                                <td class="r-spacing"><input type="radio" name="R-value" value="2" id="r2"><label for="r2">2</label></td>
+                                <td class="r-spacing"><input type="radio" name="R-value" value="2.5" id="r2_5"><label for="r2_5">2.5</label></td>
+                                <td class="r-spacing"><input type="radio" name="R-value" value="3" id="r3"><label for="r3">3</label></td>
+                            </tr>
+
+                            <!-- Строка для кнопок управления -->
+                            <tr>
+                                <td colspan="10" style="text-align: center; padding-top: 10px;">
+                                    <button id="submit-btn" class="control-btn">Отправить</button>
+                                    <button id="clear-btn" class="control-btn">Очистить таблицу</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<table class="Set-table">
+    <thead class="Top">
+    <tr>
+        <th>X</th>
+        <th>Y</th>
+        <th>R</th>
+        <th>Текущее время</th>
+        <th>Время исполнения</th>
+        <th>Результат попадания</th>
+    </tr>
+    </thead>
+    <tbody class="result">
+    <!-- Здесь будут добавляться строки -->
+    </tbody>
+</table>
+
+</body>
+
+<script src="graph.js"></script>
+<script src="validation1.js"></script>
+</html>
